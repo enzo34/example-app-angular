@@ -1,0 +1,7 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div *ngFor="let controlName of form.controls | keyvalue">
+    <label>{{ controlName.key }}</label>
+    <input type="text" [formControlName]="controlName.key">
+  </div>
+  <button type="submit">Submit</button>
+</form>
